@@ -8,6 +8,18 @@ package com.mycompany.myfancyjavaproject;
  *
  * @author Ashiq
  */
+public class Main {
+    public static void main(String[] args) {
+        Database db1;
+
+      // refers to the only object of Database
+      db1= Database.getInstance();
+      
+      db1.getConnection();
+    }
+   
+}
+
 class Database {
    private static Database dbObject;
 
@@ -30,13 +42,3 @@ class Database {
    }
 }
 
-class Main {
-   public static void main(String[] args) {
-      Database db1;
-
-      // refers to the only object of Database
-      db1= Database.getInstance();
-      
-      db1.getConnection();
-   }
-}
